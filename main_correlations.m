@@ -1,10 +1,6 @@
 %% load pair-rule expression data
 load('pair_rule_expression_data.mat');
 
-age=[data.age];
-profiles_eve=horzcat(data.eve);
-profiles_run=horzcat(data.run);
-profiles_prd=horzcat(data.prd);
 %% inspect data
 figure(1)
 subplot(3,1,1)
