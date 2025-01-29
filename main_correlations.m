@@ -66,6 +66,18 @@ xlabel('Embryo #');
 ylabel('x_{AP}')
 title('Prd');
 axis([0 60 0.3 0.85])
+
+% Assignment:
+% 1. Fit the 1D expression profiles, and find the center of each of the 
+%    seven stripes for all three genes.
+% 
+% 2. Correct the position of each stripe to a position that it was at some 
+%    reference point.
+% 
+% 3. Calculate the correlations in the (corrected) positions. Plot the
+%    correlations as a function of the distance in their positions? 
+%    How far are the fluctuations in stripe position correlated?
+% 
 % Note 1:
 % for the rest of the exercise, it is recommended to use only the relevant 
 % portion of the profiles where the stripes are visible: ~0.3 - 0.85 x.
@@ -81,14 +93,4 @@ axis([0 60 0.3 0.85])
 % late embryos. You can (and should) ignore it in your analysis, but you
 % should be careful about how it might affect your analysis protocol.
 
-%% Fit the 1D expression profiles, and find the center of each of the seven
-% stripes for all three genes.  
- 
-%% Correct the position of each stripe to a position that it was at some 
-% reference point.
-
-%% Calculate the correlations in the (corrected) positions. 
-
-%% Plot the correlations as a function of the distance in their positions?
-% How far are the fluctuations in stripe position correlated?
 
