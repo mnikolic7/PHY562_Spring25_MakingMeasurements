@@ -1,41 +1,40 @@
-% Data and analysis from:
-% McGough, Lauren, et al. "Finding the last bits of positional information"
-% PRX Life 2.1 (2024): 013016.
+% The dataset includes measurements of gene expression in the fruit fly
+% embryo during the period between 2 and 3 hours post-fertilization.
 %
-% The data set includes measurements of gene expression in the fruitfly
-% embryo during the period between 2 to 3 hours post fertilization. 
+% During this period, the embryo consists of approximately 6,000 identical nuclei,
+% arranged in a 2D lattice along the embryo surface. The cell membrane
+% begins to form during nuclear cycle 14, taking 60 minutes to fully develop
+% between all nuclei.
 %
-% During this period, the embryo consists of ~6000 identical nuclei, that
-% are arranged along the embryo surface in a 2D lattice. They have no cell
-% membrane, although the cell membrane slowly grows and forms during this 
-% 60 min period.
+% Gene expression is measured by fixing the embryos (hence, the data
+% represents a single snapshot for each embryo) and performing
+% immunofluorescence staining of three proteins: Even-skipped, Runt, and
+% Paired. All three proteins are imaged in the same embryo using three
+% different fluorescence channels, and multiple embryos (N=109) are analyzed.
 %
-% Gene expression is measured by fixing the embryos (hence the data
-% represents one snapshot for each embryo), and performing
-% immunofluorescence staining of three proteins (Even-skipped, Runt, and
-% Paired). All three genes are imaged in the same embryo using three
-% different fluorescence channels, and many embryos (N=109) are imaged. 
+% For each embryo, we examine a single optical section through the middle
+% of the embryo (midsagittal plane), which cuts through the 2D array of nuclei.
+% We focus on the dorsal side, which appears as a straight line in our images,
+% with fluorescence intensity varying in the characteristic patterns of the
+% three proteins studied.
 %
-% For each embryo, we look at one optical section through the middle of the
-% embryo (midsaggital plane), which cuts through the 2D array of nuclei. We
-% focus on the dorsal side, which in our images looks like a straight line
-% with fluorescence intensity that varies in the characteristic pattern of
-% the three proteins we looked at. 
-% An image processing protocol was used to extract the fluorescence
-% intensity along the dorsal side of the embryo. We look at the 
-% fluorescence intensity of all three genes as a function of scaled 
-% position in the embryo, where 0 = embryo anterior, and 1 = embryo 
-% posterior. 
+% An image processing protocol was used to extract fluorescence
+% intensity along the dorsal side of the embryo. We analyze the
+% fluorescence intensity of all three proteins as a function of the scaled
+% position in the embryo, where 0 corresponds to the anterior and 1 to the
+% posterior.
 %
-% The variables profiles_'gene' are 1000x109 arrays in which i^th column is
-% the fluorescence intensity as a function the scaled position in the i^th
-% embryo. Each column corresponds to one embryo.
-% 
-% The embryo "age" is defined as the time in the nuclear cycle 14 (after 13 
-% syncrhonized divisions post fertilization). Nuclear cycle 14 is the
-% longest and last ~60 min. The variable 'age' contains the experimentally
-% determined time in the nuclear cycle 14.
-
+% The variables profiles_'gene' are 1000×109 arrays, where the i^th column
+% represents the fluorescence intensity as a function of the scaled position
+% (1000 positions from 0 to 1) in the i^th embryo. Each column corresponds to
+% one embryo.
+%
+% The "age" of the embryo is defined as the time within nuclear cycle 14
+% (following 13 synchronized divisions post-fertilization). Nuclear cycle 14
+% is the longest, lasting approximately 60 minutes. The variable 'age'
+% contains the experimentally determined time within nuclear cycle 14, which
+% we estimate for each embryo by measuring the progress of cell membrane
+% formation.
 
 %% load pair-rule expression data
 load('pair_rule_expression_data.mat');
