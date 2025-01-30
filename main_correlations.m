@@ -1,3 +1,7 @@
+% Data and analysis from:
+% McGough, Lauren, et al. "Finding the last bits of positional information"
+% PRX Life 2.1 (2024): 013016.
+%
 % The dataset includes measurements of gene expression in the fruit fly
 % embryo during the period between 2 and 3 hours post-fertilization.
 %
@@ -35,6 +39,7 @@
 % contains the experimentally determined time within nuclear cycle 14, which
 % we estimate for each embryo by measuring the progress of cell membrane
 % formation.
+
 
 %% load pair-rule expression data
 load('pair_rule_expression_data.mat');

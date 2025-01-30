@@ -28,14 +28,15 @@
 % posterior. 
 %
 % The variables profiles_'gene' are 1000x109 arrays in which i^th column is
-% the fluorescence intensity as a function the scaled position in the i^th
-% embryo. Each column corresponds to one embryo.
+% the fluorescence intensity as a function the scaled position (1000
+% positions from 0 to 1)  in the i^th embryo. Each column corresponds to 
+% one embryo.
 % 
 % The embryo "age" is defined as the time in the nuclear cycle 14 (after 13 
 % syncrhonized divisions post fertilization). Nuclear cycle 14 is the
 % longest and last ~60 min. The variable 'age' contains the experimentally
 % determined time in the nuclear cycle 14, which we estimate for each
-% embryo by measuring the  of the cell membrane.
+% embryo by measuring the progress of the cell membrane formation. 
 
 
 %% load pair-rule expression data
